@@ -9,7 +9,7 @@
             Adds a coin to the jar
             </summary>
             <param name="command">New coin</param>
-            <returns></returns>
+            <returns>Coin jar details</returns>
         </member>
         <member name="M:CoinJarGK.WebAPI.Controllers.CoinJarController.ResetAction">
             <summary>

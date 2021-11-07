@@ -13,16 +13,16 @@ namespace CoinJarGK.WebAPI.Controllers
         /// Adds a coin to the jar
         /// </summary>
         /// <param name="command">New coin</param>
-        /// <returns></returns>
+        /// <returns>Coin jar details</returns>
         [HttpPost("coin")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult> AddCoinAction([FromBody] AddCoinToJarCommand command)
+        public async Task<ActionResult<AddCoinToJarDto>> AddCoinAction([FromBody] AddCoinToJarCommand command)
         {
-            await Mediator.Send(command);
+            var jarDetail = await Mediator.Send(command);
 
-            return Created(nameof(GetTotalAmountAction), null);
+            return Created(nameof(GetTotalAmountAction), jarDetail);
         }
 
         /// <summary>
