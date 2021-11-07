@@ -1,8 +1,10 @@
 using CoinJarGK.Application;
 using CoinJarGK.Infrastructure;
+using CoinJarGK.WebAPI.Filters;
 using CoinJarGK.WebAPI.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,9 +27,17 @@ namespace CoinJarGK.WebAPI
 
             services.AddInfrastructure(Configuration);
 
-            services.AddControllers();
-
             services.AddSwagger();
+
+            services.AddControllers(options => 
+            {
+                options.Filters.Add<ApiExceptionFilterAttribute>();
+            });
+
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

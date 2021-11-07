@@ -8,7 +8,7 @@ namespace CoinJarGK.Application.Common.Exceptions
     public class CustomValidationException : Exception
     {
         public CustomValidationException()
-            : base("One or more validation failures have occurred.")
+            : base("One or more validation failures have occurred")
         {
             Errors = new Dictionary<string, string[]>();
         }

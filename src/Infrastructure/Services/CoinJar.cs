@@ -23,7 +23,7 @@ namespace CoinJarGK.Infrastructure.Services
 
             if (coinDetail.TotalVolume + coin.Volume > _maxVolume)
             {
-                throw new CoinJarVolumeExceedException($"Coin cannot be added as the volume would then exceed {_maxVolume} fluid ounces");
+                throw new CoinJarVolumeExceedException(_maxVolume);
             }
 
             coinDetail.TotalAmount += coin.Amount;
