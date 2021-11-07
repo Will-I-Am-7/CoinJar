@@ -1,4 +1,5 @@
 using CoinJarGK.Application;
+using CoinJarGK.Infrastructure;
 using CoinJarGK.WebAPI.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -21,6 +22,8 @@ namespace CoinJarGK.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApplication();
+
+            services.AddInfrastructure(Configuration);
 
             services.AddControllers();
 
