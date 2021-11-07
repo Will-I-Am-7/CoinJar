@@ -4,5 +4,24 @@
         <name>CoinJarGK.WebAPI</name>
     </assembly>
     <members>
+        <member name="M:CoinJarGK.WebAPI.Controllers.CoinJarController.AddCoinAction(CoinJarGK.Application.CoinJar.Commands.AddCoinToJar.AddCoinToJarCommand)">
+            <summary>
+            Adds a coin to the jar
+            </summary>
+            <param name="command">New coin</param>
+            <returns></returns>
+        </member>
+        <member name="M:CoinJarGK.WebAPI.Controllers.CoinJarController.ResetAction">
+            <summary>
+            Reset the coins
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CoinJarGK.WebAPI.Controllers.CoinJarController.GetTotalAmountAction">
+            <summary>
+            Get the total amount of our coins
+            </summary>
+            <returns>Total amount of our coins</returns>
+        </member>
     </members>
 </doc>

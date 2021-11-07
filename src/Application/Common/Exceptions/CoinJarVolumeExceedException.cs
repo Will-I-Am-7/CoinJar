@@ -9,7 +9,7 @@ namespace CoinJarGK.Application.Common.Exceptions
         {
             Details = new Dictionary<string, string[]>
             {
-                { "Volume exceeded maximum volume of the jar", new string[] { $"{volume}" } }
+                { "Volume", new string[] { $"Coin cannot be added as the volume would then exceed {volume} fluid ounces" } }
             };
         }
 
