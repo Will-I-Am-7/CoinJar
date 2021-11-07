@@ -8,6 +8,8 @@ I used in-memory caching for persistence.
 
 Swagger is used for API documentation ({baseURL}/swagger/index.html). Must run in Debug mode to access Swagger.
 
+The max volume of the jar can be set in appsettings.json. Default is set to 42 as instructed.
+
 ### Application
 This layer contains application logic. It defines interfaces which are implemented by the Infrastructure
 layer. ICoinJar is found here but not the implementation.
