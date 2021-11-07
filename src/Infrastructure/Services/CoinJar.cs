@@ -9,7 +9,7 @@ namespace CoinJarGK.Infrastructure.Services
     {
         private readonly ICoinJarPersistence _persistence;
 
-        private readonly decimal _maxVolume = 42;
+        private readonly decimal _maxVolume;
 
         public CoinJar(ICoinJarPersistence persistence, IOptions<CoinJarConfiguration> options)
         {
