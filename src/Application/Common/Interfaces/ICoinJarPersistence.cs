@@ -1,8 +1,10 @@
-﻿namespace CoinJarGK.Application.Common.Interfaces
+﻿using CoinJarGK.Application.Common.Models;
+
+namespace CoinJarGK.Application.Common.Interfaces
 {
     public interface ICoinJarPersistence
     {
-        ICoinJarDetail GetDetail();
-        void UpdateDetail(ICoinJarDetail coinDetail);
+        CoinJarDetail GetDetail();
+        void UpdateDetail(CoinJarDetail coinDetail);
     }
 }
