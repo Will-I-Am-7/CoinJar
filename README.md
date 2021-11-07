@@ -6,6 +6,8 @@ My application is split into three layers - Application, Infrastructure and WebA
 
 I used in-memory caching for persistence.
 
+Swagger is used for API documentation ({baseURL}/swagger/index.html). Must run in Debug mode to access Swagger.
+
 ### Application
 This layer contains application logic. It defines interfaces which are implemented by the Infrastructure
 layer. ICoinJar is found here but not the implementation.
