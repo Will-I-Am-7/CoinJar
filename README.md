@@ -20,6 +20,10 @@ implementations for interfaces found in the Application layer. ICoinJar and pers
 API layer. Contains controller actions which simply sends a mediator request to the Application layer and returns
 an appropriate response.
 
+### Testing
+I added some unit tests for exceptions in the Application layer.
+I also created integration tests for my commands and queries in the Application layer.
+
 ## Building and running
 
 ### Prerequisites
