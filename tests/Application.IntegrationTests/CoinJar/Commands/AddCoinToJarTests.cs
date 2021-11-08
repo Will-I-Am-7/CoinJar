@@ -47,9 +47,16 @@ namespace CoinJarGK.Application.IntegrationTests.CoinJar.Commands
         {
             var command = new AddCoinToJarCommand { Amount = 10, Volume = 2 };
 
-            await SendMediatorRequestAsync(command);
+            var dto = await SendMediatorRequestAsync(command);
 
             var jarDetails = await SendMediatorRequestAsync(new GetCoinJarTotalAmountQuery());
+
+            dto.Should().BeEquivalentTo(new AddCoinToJarDto
+            {
+                TotalAmount = 10,
+                TotalCoins = 1,
+                TotalVolume = 2
+            });
 
             jarDetails.TotalAmount.Should().Be(command.Amount);
         }
